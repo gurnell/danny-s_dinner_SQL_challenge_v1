@@ -16,14 +16,29 @@ Each of the following case study questions can be answered using a single SQL st
 8. What is the total items and amount spent for each member before they became a member?
 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
-### Solution
+## Solution
 The complete syntax is [here](https://github.com/gurnell/danny-s_dinner_SQL_challenge_v1/blob/main/Danny's%20Dinner%20SQL%20challenge%20v1.sql).
+Software used is **Microsoft SQL Server**
 
 1. What is the total amount each customer spent at the restaurant?
+
+-use the aggregate function **SUM** to find the total amount spent by customers and use **GROUP BY** to aggregate.
+-two tables are needed for this query so use **JOIN** to match tables(sales and menu).
 ````sql
-Select s.customer_id, SUM(m.price)
+Select s.customer_id, SUM(m.price) AS total_sales
 From sales s
 Join menu m
   ON s.product_id = m.product_id
 Group by s.customer_id
 ````
+#### Answer
+|customer_id |total_sales|
+|----------- |-----------|
+|A           |76         |
+|B           |74         |
+|C           |36         |
+
+The results are:
+- Customer A spent $76
+- Customer B spent $74
+- Customer C spent $36
