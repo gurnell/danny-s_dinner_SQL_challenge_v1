@@ -2,7 +2,7 @@
 ### Problem Statement
 Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. Having this deeper connection with his customers will help him deliver a better and more personalised experience for his loyal customers.
 ### Entity Relationship Diagram
-(![entity relationship](https://user-images.githubusercontent.com/82497047/198216631-0d103cc3-1eb6-4269-8c09-0a8774ccda20.png)
+![image](https://user-images.githubusercontent.com/82497047/198218170-5deb7863-9427-409d-81d9-faffee71a293.png)
 ### Case Study Questions
 Each of the following case study questions can be answered using a single SQL statement:
 
