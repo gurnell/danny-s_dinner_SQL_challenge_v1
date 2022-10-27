@@ -294,7 +294,7 @@ Group by d.customer_id, d.join_date, d.interval_dates, d.last_day,
 
 Customer A has 1370 points while customer B has 820 points.
 
-### BONUS QUSTIONS 
+### BONUS QUESTIONS 
 #### Join all the things.
 
 - Create a new table using customer_id, order_date, product_name, price.
