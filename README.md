@@ -45,4 +45,20 @@ The results are:
 
 2. How many days has each customer visited the restaurant?
 
--
+- To get unique days use **COUNT DISTINCT** on the order_date column and **GROUP BY** customer_id.
+````sql
+Select customer_id, COUNT(DISTINCT order_date) AS days_visited
+From sales
+Group by customer_id
+````
+#### Answer
+|customer_id |days_visited|
+|----------- |----------- |
+|A           |4           |
+|B           |6           |
+|C           |2           |
+
+The results are:
+- Customer A visited 4 times.
+- Customer B visited 6 times.
+- Customer C visited 2 times.
