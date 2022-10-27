@@ -18,12 +18,12 @@ Each of the following case study questions can be answered using a single SQL st
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
 ## Solution
 The complete syntax is [here](https://github.com/gurnell/danny-s_dinner_SQL_challenge_v1/blob/main/Danny's%20Dinner%20SQL%20challenge%20v1.sql).
-Software used is **Microsoft SQL Server**
+Software used is **Microsoft SQL Server**.
 
 1. What is the total amount each customer spent at the restaurant?
 
--use the aggregate function **SUM** to find the total amount spent by customers and use **GROUP BY** to aggregate.
--two tables are needed for this query so use **JOIN** to match tables(sales and menu).
+- Use the aggregate function **SUM** to find the total amount spent by customers and use **GROUP BY** to aggregate. 
+- Two tables are needed for this query so use **JOIN** to match tables(sales and menu).
 ````sql
 Select s.customer_id, SUM(m.price) AS total_sales
 From sales s
@@ -42,3 +42,7 @@ The results are:
 - Customer A spent $76
 - Customer B spent $74
 - Customer C spent $36
+
+2. How many days has each customer visited the restaurant?
+
+-
