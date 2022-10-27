@@ -65,8 +65,9 @@ The results are:
 
 3. What was the first item from the menu purchased by each customer?
 
-For this query create a CTE the WITH function. In the CTE, use **DENSE_RANK** and **OVER(PARTITION BY ORDER BY)** to create a new column which ranks the item based on order_date.
-DENSE_RANK is used for this query as it assigns a rank to each row within a partition of a result set. We do not know which item was ordered fist, hence I want to show the result as the same rank if they ordered separate items on the same date. So, we add a WHERE clause to see **rank = 1** and group by customer_id and product_name.
+- For this query create a CTE the WITH function. In the CTE, use **DENSE_RANK** and **OVER(PARTITION BY ORDER BY)** to create a new column which ranks the item based on order_date.
+- DENSE_RANK is used for this query as it assigns a rank to each row within a partition of a result set. 
+- We do not know which item was ordered fist, hence I want to show the result as the same rank if they ordered separate items on the same date. So, we add a WHERE clause to see **rank = 1** and group by customer_id and product_name.
 ````sql
 WITH ranked_item as (
    Select s.customer_id, s.order_date ,m.product_name,
